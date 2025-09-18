@@ -3,12 +3,12 @@ import pandas as pd
 import gspread
 from google.oauth2 import service_account 
 
-creds = service_account.Credentials.from_service_account_file('cambiocredentials.json', scopes=['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive'])
+creds = service_account.Credentials.from_service_account_file('cambio_creds_template.json', scopes=['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive'])
 
 client = gspread.authorize(creds)
 
 # --- 2. Open the Google Sheet ---
-sheet_id = "1-47SoINk-1zj6gj1Wq4cB3LVcxazqYEL4BuKW3kumrQ"  # Your Google Sheet ID
+sheet_id = "   "  # Your Google Sheet ID
 
 sheet = client.open_by_key(sheet_id)
 worksheet = sheet.sheet1
